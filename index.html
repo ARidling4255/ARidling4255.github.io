@@ -10,7 +10,7 @@
 <style>
 :root{--bg:#fff;--sage:#E9F0EA;--sage-deep:#CFE1D5;--ink:#14171A;--ink-soft:#4B5157;--muted:#767C82;--accent:#2F5D50;--accent-soft:#DCE8E1;--line:#E7E5DD;--card:#F6F5F0;--rl:32px;--rm:20px;--maxw:1160px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink-soft);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);margin:0}a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);margin:0;font-weight:800}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 header.site-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
@@ -19,7 +19,7 @@ nav.links{display:flex;gap:32px}nav.links a{font-size:14.5px;font-weight:500;col
 .hero{background:var(--sage);border-radius:0 0 var(--rl) var(--rl);padding:72px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .hero-eyebrow{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:6px}
-.hero-name{font-size:clamp(44px,6vw,68px);font-weight:800;line-height:1.03}
+.hero-name{font-size:clamp(44px,6vw,68px);font-weight:800;line-height:1.03;color:var(--ink)}
 .type-cursor{display:inline-block;width:3px;height:.82em;margin-left:4px;background:var(--accent);vertical-align:-.08em;animation:blink .9s step-end infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.type-cursor{animation:none;opacity:1}}
@@ -34,7 +34,7 @@ nav.links{display:flex;gap:32px}nav.links a{font-size:14.5px;font-weight:500;col
 .t-icon{width:42px;height:42px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
 .t-name{font-size:14px;font-weight:700;color:var(--ink)}.t-role{font-size:12px;color:var(--muted)}
 section{padding:88px 0}.eyebrow{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:10px}
-.section-title{font-size:clamp(28px,3.4vw,38px);font-weight:800}.section-title .light{color:var(--muted);font-weight:500}
+.section-title,.section-title .light{font-size:clamp(28px,3.4vw,38px);font-weight:800;color:#14171A}
 .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;margin-top:40px}
 .about-copy p{font-size:16.5px;line-height:1.75;margin:0 0 18px;max-width:56ch}
 .field-note{background:var(--card);border-radius:var(--rm);padding:22px 24px;margin-top:24px}
@@ -69,7 +69,7 @@ section{padding:88px 0}.eyebrow{font-size:14px;font-weight:600;color:var(--accen
 .lead-date{font-size:12.5px;color:var(--accent);font-weight:600;white-space:nowrap}
 footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px 0 36px;margin-top:20px}
 .footer-head{text-align:center;padding-bottom:36px;border-bottom:1px solid rgba(20,23,26,.1);margin-bottom:32px}
-.footer-head h2{font-size:clamp(26px,3.6vw,36px);max-width:26ch;margin:0 auto 12px}
+.footer-head h2{font-size:clamp(26px,3.6vw,36px);max-width:26ch;margin:0 auto 12px;color:var(--ink);font-weight:800}
 .footer-head .sub{color:var(--ink-soft);font-size:15px;max-width:42ch;margin:0 auto}
 .link-card{max-width:440px;margin:0 auto;text-align:center}
 .link-avatar{width:88px;height:88px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;margin:0 auto 18px}
@@ -110,7 +110,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 </div></section>
 <section id="about"><div class="wrap">
 <div class="eyebrow">About</div>
-<h2 class="section-title">Who I <span class="light">Am</span></h2>
+<h2 class="section-title">Who I Am</h2>
 <div class="about-grid">
 <div class="about-copy">
 <p>I'm a Supply Chain Management graduate who has spent the last few years learning how operations actually break, and how to keep them running anyway. At Enterprise Mobility, that meant managing a 250-plus vehicle rental branch through sales, CRM, procurement, and vendor negotiations. At Lockheed Martin, it means tracking parts, coordinating suppliers, and making sure nothing slows down a jet.</p>
@@ -128,7 +128,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 </div></div></div></section>
 <section id="experience"><div class="wrap">
 <div class="eyebrow">Experience</div>
-<h2 class="section-title" style="margin-bottom:40px">Where I've <span class="light">Worked</span></h2>
+<h2 class="section-title" style="margin-bottom:40px">Where I've Worked</h2>
 <div class="job-panel dark"><div class="job-top"><div><h3>Lockheed Martin</h3><span class="job-role">Data Analyst Associate</span></div><span class="job-meta">June 2026 — Present · Fort Worth, TX</span></div>
 <ul><li>Coordinate with over a dozen suppliers, both domestic and international</li><li>Approved more than five IPPs in the first thirty days, supporting customer readiness across the globe</li><li>Conduct quality inspections on over one thousand EELs, tracking and cataloging equipment attributes to minimize jet downtime</li></ul></div>
 <div class="job-panel light"><div class="job-top"><div><h3>Enterprise Mobility</h3><span class="job-role">Management Trainee Intern</span></div><span class="job-meta">May 2025 — August 2025 · Weatherford, TX</span></div>
@@ -138,7 +138,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 </div></section>
 <section id="skills"><div class="wrap">
 <div class="eyebrow">Skills</div>
-<h2 class="section-title">Tools I <span class="light">Work With</span></h2>
+<h2 class="section-title">Tools I Work With</h2>
 <div class="service-grid">
 <div class="service-card"><h4>ERP Systems</h4><p>Familiar with SAP for inventory tracking and process management.</p></div>
 <div class="service-card"><h4>Tableau</h4><p>Data visualization and dashboards for trend analysis and insight.</p></div>
@@ -150,7 +150,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 </div></section>
 <section id="education"><div class="wrap">
 <div class="eyebrow">Education</div>
-<h2 class="section-title">Academic <span class="light">Background</span></h2>
+<h2 class="section-title">Academic Background</h2>
 <div class="edu-grid">
 <div class="edu-card"><span class="edu-date">Expected May 2028</span><h3>Master of Science, Product Innovation</h3><h4>University of Arkansas — Sam M. Walton College of Business</h4><div class="coursework"><b>Relevant coursework:</b> Development with Digital Innovations, Business Foundations for Innovation and Entrepreneurship</div></div>
 <div class="edu-card"><span class="edu-date">May 2026</span><h3>B.S. Business Administration, Supply Chain Management</h3><h4>University of Arkansas — Sam M. Walton College of Business</h4><div class="gpa">GPA: 3.42</div><div class="coursework"><b>Relevant coursework:</b> Data Analysis & Interpretation, ERP Fundamentals, Procurement and Supply Chain Management, Business Information Systems, Integrated Supply Chain Management</div></div>
@@ -158,7 +158,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 </div></section>
 <section id="leadership"><div class="wrap">
 <div class="eyebrow">Community</div>
-<h2 class="section-title">Leadership & <span class="light">Service</span></h2>
+<h2 class="section-title">Leadership & Service</h2>
 <div class="lead-grid">
 <div class="lead-card"><div><div class="lead-org">NWA Feed Rogers Food Pantry</div><div class="lead-role">Volunteer — 114 hours</div></div><span class="lead-date">Nov 2025 – Apr 2026</span></div>
 <div class="lead-card"><div><div class="lead-org">Tarleton State University</div><div class="lead-role">SGA, Pro-Tempore</div></div><span class="lead-date">Aug 2023 – May 2024</span></div>

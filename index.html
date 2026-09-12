@@ -98,7 +98,7 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
 <p class="hero-role">A Supply Chain Management graduate working as a Data Analyst Associate at Lockheed Martin, headed into the M.S. Product Innovation program at the University of Arkansas.</p>
 </div>
 <div class="hero-visual">
-<div class="arch"><img id="portrait-img" src="portrait.svg?v=6" alt="Portrait of Aidan Ridling"></div>
+<div class="arch"><img src="portrait.jpg?v=7" alt="Portrait of Aidan Ridling"></div>
 <div class="info-chip"><div class="chip-title">Eligible for Security Clearance</div><div class="chip-sub">Based in Weatherford, Texas — open to data, operations, and product roles.</div></div>
 </div>
 </div>
@@ -198,18 +198,6 @@ footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px
     }
   }
   typeNext();
-})();
-(function(){
-  var img = document.getElementById('portrait-img');
-  if(!img) return;
-  Promise.all([1,2,3,4].map(function(n){
-    return fetch('portrait-b64-'+n+'.txt?v=6').then(function(r){
-      if(!r.ok) throw new Error('missing');
-      return r.text();
-    });
-  })).then(function(parts){
-    img.src = 'data:image/jpeg;base64,' + parts.join('').replace(/\s+/g,'');
-  }).catch(function(){});
 })();
 </script>
 </body>

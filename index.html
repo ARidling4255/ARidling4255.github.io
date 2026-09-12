@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aidan Ridling — Supply Chain & Product Innovation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--sage:#E9F0EA;--sage-deep:#CFE1D5;--ink:#14171A;--ink-soft:#4B5157;--muted:#767C82;--accent:#2F5D50;--accent-soft:#DCE8E1;--line:#E7E5DD;--card:#F6F5F0;--rl:32px;--rm:20px;--maxw:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink-soft);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);margin:0}a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+header.site-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:var(--ink)}.brand span{color:var(--accent)}
+nav.links{display:flex;gap:32px}nav.links a{font-size:14.5px;font-weight:500;color:var(--ink-soft)}
+.hero{background:var(--sage);border-radius:0 0 var(--rl) var(--rl);padding:72px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero-eyebrow{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.hero-name{font-size:clamp(44px,6vw,68px);font-weight:800;line-height:1.03}
+.type-cursor{display:inline-block;width:3px;height:.82em;margin-left:4px;background:var(--accent);vertical-align:-.08em;animation:blink .9s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.type-cursor{animation:none;opacity:1}}
+.hero-role{font-size:16px;color:var(--ink-soft);max-width:40ch;margin:20px 0 26px;line-height:1.6}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.arch{width:100%;max-width:400px;aspect-ratio:4/5;background:var(--sage-deep);border-radius:220px 220px 24px 24px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:48px;color:var(--accent)}
+.info-chip{position:absolute;bottom:-18px;left:-10px;background:#fff;border-radius:var(--rm);padding:16px 20px;box-shadow:0 14px 34px rgba(20,23,26,.1);max-width:230px;border:1px solid var(--line)}
+.chip-title{font-size:13px;font-weight:700;margin-bottom:4px}.chip-sub{font-size:12px;color:var(--muted);line-height:1.5}
+.thumb-strip{margin-top:56px;background:#fff;border-radius:var(--rl) var(--rl) 0 0;padding:26px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.thumb{background:var(--card);border-radius:var(--rm);padding:20px;display:flex;align-items:center;gap:14px}
+.t-icon{width:42px;height:42px;border-radius:12px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
+.t-name{font-size:14px;font-weight:700;color:var(--ink)}.t-role{font-size:12px;color:var(--muted)}
+section{padding:88px 0}.eyebrow{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:10px}
+.section-title{font-size:clamp(28px,3.4vw,38px);font-weight:800}.section-title .light{color:var(--muted);font-weight:500}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;margin-top:40px}
+.about-copy p{font-size:16.5px;line-height:1.75;margin:0 0 18px;max-width:56ch}
+.field-note{background:var(--card);border-radius:var(--rm);padding:22px 24px;margin-top:24px}
+.fn-label{font-size:12.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:8px}
+.tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.tag-row span{font-size:13.5px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff}
+.value-card{background:var(--ink);border-radius:var(--rl);padding:30px;color:#fff}.value-card h3{color:#fff;font-size:19px;margin-bottom:16px}
+.value-card p{font-size:14px;line-height:1.65;color:rgba(255,255,255,.72);margin:0}
+.stat-band{background:var(--ink);border-radius:var(--rl);padding:56px 40px}
+.stat-band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.stat-big{grid-column:span 2}.num{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(46px,6vw,72px);color:#fff;line-height:1}
+.lbl{color:rgba(255,255,255,.6);font-size:14.5px;margin-top:10px}
+.stat-mini{border-left:1px solid rgba(255,255,255,.15);padding-left:24px}.stat-mini .num{font-size:clamp(28px,3.4vw,36px)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.service-card{background:var(--card);border-radius:var(--rm);padding:28px}
+.service-card h4{font-size:16.5px;margin-bottom:8px}.service-card p{font-size:13.5px;line-height:1.6;color:var(--muted);margin:0}
+.job-panel{border-radius:var(--rl);padding:44px;margin-bottom:20px}
+.job-panel.light{background:var(--card)}.job-panel.dark{background:var(--ink);color:rgba(255,255,255,.85)}
+.job-panel.dark h3,.job-panel.dark .job-role{color:#fff}.job-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:18px}
+.job-panel h3{font-size:24px;margin-bottom:6px}.job-role{font-size:14.5px;color:var(--accent);font-weight:600}.job-panel.dark .job-role{color:#9FD4B8}
+.job-meta{font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(20,23,26,.06)}
+.job-panel.dark .job-meta{background:rgba(255,255,255,.1);color:#fff}
+.job-panel ul{margin:0;padding-left:20px}.job-panel li{font-size:15px;line-height:1.7;margin-bottom:8px}
+.edu-grid,.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.edu-card{background:var(--card);border-radius:var(--rm);padding:28px}
+.edu-date{display:inline-block;font-size:12.5px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.edu-card h3{font-size:18px;margin-bottom:6px}.edu-card h4{font-size:14px;font-weight:500;color:var(--muted);margin-bottom:16px}
+.gpa{font-size:13.5px;font-weight:600;color:var(--ink);margin:-8px 0 16px}
+.coursework{font-size:13.5px;line-height:1.65;border-top:1px solid var(--line);padding-top:14px}
+.lead-card{border:1px solid var(--line);border-radius:var(--rm);padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lead-org{font-size:15.5px;font-weight:700;color:var(--ink);margin-bottom:4px}.lead-role{font-size:13.5px;color:var(--muted)}
+.lead-date{font-size:12.5px;color:var(--accent);font-weight:600;white-space:nowrap}
+footer{background:var(--sage);border-radius:var(--rl) var(--rl) 0 0;padding:64px 0 36px;margin-top:20px}
+.footer-head{text-align:center;padding-bottom:36px;border-bottom:1px solid rgba(20,23,26,.1);margin-bottom:32px}
+.footer-head h2{font-size:clamp(26px,3.6vw,36px);max-width:26ch;margin:0 auto 12px}
+.footer-head .sub{color:var(--ink-soft);font-size:15px;max-width:42ch;margin:0 auto}
+.link-card{max-width:440px;margin:0 auto;text-align:center}
+.link-avatar{width:88px;height:88px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;margin:0 auto 18px}
+.link-card h2{font-size:24px;margin-bottom:6px}.link-card .sub{font-size:14.5px;margin:0 auto 30px}
+.link-stack{display:flex;flex-direction:column;gap:12px}
+.link-btn{display:flex;align-items:center;gap:14px;width:100%;padding:15px 22px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:15px;font-weight:600;color:var(--ink)}
+.link-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.foot-note{font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:860px){nav.links{display:none}.hero-grid,.about-grid,.edu-grid,.lead-grid,.service-grid{grid-template-columns:1fr}.thumb-strip,.stat-band-grid{grid-template-columns:1fr 1fr}.stat-big{grid-column:span 2}.hero-visual{order:-1}.info-chip{position:static;margin-top:16px}}
+@media(max-width:600px){.wrap{padding:0 20px}section{padding:56px 0}.job-panel{padding:26px}.service-grid,.thumb-strip,.stat-band-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-nav"><div class="nav-inner">
+<a class="brand" href="#top">Aidan<span>.</span></a>
+<nav class="links">
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+</div></header>
+<main id="top">
+<section class="hero" style="padding-bottom:0"><div class="wrap">
+<div class="hero-grid">
+<div>
+<div class="hero-eyebrow">Hello</div>
+<h1 class="hero-name" aria-label="I am Aidan">I am<br><span id="typed-name"></span><span class="type-cursor" aria-hidden="true"></span></h1>
+<p class="hero-role">A Supply Chain Management graduate working as a Data Analyst Associate at Lockheed Martin, headed into the M.S. Product Innovation program at the University of Arkansas.</p>
+</div>
+<div class="hero-visual">
+<div class="arch">AR</div>
+<div class="info-chip"><div class="chip-title">Eligible for Security Clearance</div><div class="chip-sub">Based in Weatherford, Texas — open to data, operations, and product roles.</div></div>
+</div>
+</div>
+<div class="thumb-strip">
+<div class="thumb"><div class="t-icon">LM</div><div><div class="t-name">Lockheed Martin</div><div class="t-role">Data Analyst Associate</div></div></div>
+<div class="thumb"><div class="t-icon">EM</div><div><div class="t-name">Enterprise Mobility</div><div class="t-role">Management Trainee Intern</div></div></div>
+<div class="thumb"><div class="t-icon">HB</div><div><div class="t-name">H-E-B</div><div class="t-role">Personal Shopper</div></div></div>
+</div>
+</div></section>
+<section id="about"><div class="wrap">
+<div class="eyebrow">About</div>
+<h2 class="section-title">Who I <span class="light">Am</span></h2>
+<div class="about-grid">
+<div class="about-copy">
+<p>I'm a Supply Chain Management graduate who has spent the last few years learning how operations actually break, and how to keep them running anyway. At Enterprise Mobility, that meant managing a 250-plus vehicle rental branch through sales, CRM, procurement, and vendor negotiations. At Lockheed Martin, it means tracking parts, coordinating suppliers, and making sure nothing slows down a jet.</p>
+<p>I was accepted into the University of Arkansas's M.S. Product Innovation program, and I'm using it to build on the analytical, process-driven habits I picked up in the field — the kind you only really learn when the systems are under pressure.</p>
+<div class="field-note"><span class="fn-label">Field note</span><p>A hailstorm damaged over 80% of the vehicles at my Enterprise branch. Working through the fleet recovery — inspections, vendor coordination, customer communication — is where I learned what real problem-solving under pressure looks like.</p></div>
+<div class="tag-row"><span>Supply Chain</span><span>Data Analysis</span><span>Quality Assurance</span><span>Aerospace</span><span>Retail Ops</span><span>Procurement</span><span>ERP</span></div>
+</div>
+<div class="value-card"><h3>What I Bring</h3><p>Hands-on experience across procurement, inventory, and quality assurance — plus the data fluency to turn operational chaos into a clear, trackable process.</p></div>
+</div>
+</div></section>
+<section style="padding-top:0"><div class="wrap"><div class="stat-band"><div class="stat-band-grid">
+<div class="stat-big"><div class="num">1,000+</div><div class="lbl">EELs quality-inspected and cataloged at Lockheed Martin to keep equipment tracked and jets ready</div></div>
+<div class="stat-mini"><div class="num">250+</div><div class="lbl">Vehicles managed at a single branch</div></div>
+<div class="stat-mini"><div class="num">60%</div><div class="lbl">Productivity gain from a tablet refresh</div></div>
+</div></div></div></section>
+<section id="experience"><div class="wrap">
+<div class="eyebrow">Experience</div>
+<h2 class="section-title" style="margin-bottom:40px">Where I've <span class="light">Worked</span></h2>
+<div class="job-panel dark"><div class="job-top"><div><h3>Lockheed Martin</h3><span class="job-role">Data Analyst Associate</span></div><span class="job-meta">June 2026 — Present · Fort Worth, TX</span></div>
+<ul><li>Coordinate with over a dozen suppliers, both domestic and international</li><li>Approved more than five IPPs in the first thirty days, supporting customer readiness across the globe</li><li>Conduct quality inspections on over one thousand EELs, tracking and cataloging equipment attributes to minimize jet downtime</li></ul></div>
+<div class="job-panel light"><div class="job-top"><div><h3>Enterprise Mobility</h3><span class="job-role">Management Trainee Intern</span></div><span class="job-meta">May 2025 — August 2025 · Weatherford, TX</span></div>
+<ul><li>Managed a branch with 250+ vehicles — daily operations, risk mitigation, procurement logistics, CRM, quality assurance, price negotiation, and vendor management</li><li>Proactively replaced 70% of the branch's handheld tablets, driving a 60% increase in productivity and customer satisfaction</li><li>Generated over ten MQLs for the car sales division through fact-finding and relationship-building with customers</li></ul></div>
+<div class="job-panel light"><div class="job-top"><div><h3>H-E-B</h3><span class="job-role">Personal Shopper</span></div><span class="job-meta">February 2022 — January 2023 · Hudson Oaks, TX</span></div>
+<ul><li>Optimized in-store routes by leveraging data analysis and shopping trends</li><li>Resolved 500+ customer queries and communicated alerts in a timely, solution-oriented manner</li><li>Coordinated with 50+ coworkers and managers across departments to monitor inventory and prevent stockouts</li></ul></div>
+</div></section>
+<section id="skills"><div class="wrap">
+<div class="eyebrow">Skills</div>
+<h2 class="section-title">Tools I <span class="light">Work With</span></h2>
+<div class="service-grid">
+<div class="service-card"><h4>ERP Systems</h4><p>Familiar with SAP for inventory tracking and process management.</p></div>
+<div class="service-card"><h4>Tableau</h4><p>Data visualization and dashboards for trend analysis and insight.</p></div>
+<div class="service-card"><h4>Engineering</h4><p>Certified SolidWorks Associate; reads and interprets engineering drawings.</p></div>
+<div class="service-card"><h4>Microsoft Office</h4><p>Word, Excel, and PowerPoint for reports, models, and presentations.</p></div>
+<div class="service-card"><h4>Google Suite</h4><p>Comfortable across Docs, Sheets, and Drive for collaborative work.</p></div>
+<div class="service-card"><h4>Quality Assurance</h4><p>Inspection, tracking, and documentation processes that hold up under audit.</p></div>
+</div>
+</div></section>
+<section id="education"><div class="wrap">
+<div class="eyebrow">Education</div>
+<h2 class="section-title">Academic <span class="light">Background</span></h2>
+<div class="edu-grid">
+<div class="edu-card"><span class="edu-date">Expected May 2028</span><h3>Master of Science, Product Innovation</h3><h4>University of Arkansas — Sam M. Walton College of Business</h4><div class="coursework"><b>Relevant coursework:</b> Development with Digital Innovations, Business Foundations for Innovation and Entrepreneurship</div></div>
+<div class="edu-card"><span class="edu-date">May 2026</span><h3>B.S. Business Administration, Supply Chain Management</h3><h4>University of Arkansas — Sam M. Walton College of Business</h4><div class="gpa">GPA: 3.42</div><div class="coursework"><b>Relevant coursework:</b> Data Analysis & Interpretation, ERP Fundamentals, Procurement and Supply Chain Management, Business Information Systems, Integrated Supply Chain Management</div></div>
+</div>
+</div></section>
+<section id="leadership"><div class="wrap">
+<div class="eyebrow">Community</div>
+<h2 class="section-title">Leadership & <span class="light">Service</span></h2>
+<div class="lead-grid">
+<div class="lead-card"><div><div class="lead-org">NWA Feed Rogers Food Pantry</div><div class="lead-role">Volunteer — 114 hours</div></div><span class="lead-date">Nov 2025 – Apr 2026</span></div>
+<div class="lead-card"><div><div class="lead-org">Tarleton State University</div><div class="lead-role">SGA, Pro-Tempore</div></div><span class="lead-date">Aug 2023 – May 2024</span></div>
+<div class="lead-card"><div><div class="lead-org">Purple Pantry</div><div class="lead-role">Volunteer — 30+ hours</div></div><span class="lead-date">Sept 2021 – May 2023</span></div>
+<div class="lead-card"><div><div class="lead-org">Tarleton State University</div><div class="lead-role">SGA, Congressperson</div></div><span class="lead-date">Aug 2022 – May 2023</span></div>
+</div>
+</div></section>
+</main>
+<footer id="contact"><div class="wrap">
+<div class="footer-head"><h2>Let's talk supply chain, or whatever's breaking today.</h2><p class="sub">Open to conversations about data, operations, and product roles.</p></div>
+<div class="link-card">
+<div class="link-avatar">AR</div>
+<h2>Aidan Ridling</h2>
+<p class="sub">Data Analyst Associate at Lockheed Martin</p>
+<div class="link-stack">
+<a class="link-btn" href="mailto:aidan.ridling@gmail.com">aidan.ridling@gmail.com</a>
+<a class="link-btn" href="tel:19042520250">(904) 252-0250</a>
+<a class="link-btn" href="https://www.linkedin.com/in/aidanridling" target="_blank" rel="noopener">linkedin.com/in/aidanridling</a>
+</div>
+</div>
+<div class="foot-note"><span>Aidan B. Ridling</span><span>© 2026</span></div>
+</div></footer>
+<script>
+(function(){
+  var target = document.getElementById('typed-name');
+  if(!target) return;
+  var word = 'Aidan';
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    target.textContent = word; return;
+  }
+  var i = 0;
+  function typeNext(){
+    if(i <= word.length){
+      target.textContent = word.slice(0, i);
+      i++;
+      setTimeout(typeNext, 130);
+    }
+  }
+  typeNext();
+})();
+</script>
+</body>
+</html>
